@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f = "http://java.sun.com/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<meta charset="ISO-8859-1" />
+	<title>JSF Employee Information Page</title>
+	
+	<style>
+		.error {
+			color:red;
+		}
+	</style>
+</h:head>
+<h:body>
+	<h1>Employee Information Page</h1>
+	<h:form>
+		<fieldset>		
+			<legend>Enter Employee information</legend>
+			
+						
+			Last Name: <h:inputText value="#{employeeBeanFive.lastName}" 
+			required="true" id="lastName" requiredMessage="Last Name is required"/>
+			
+			<h:message for="lastName" styleClass="error"/>
+			
+			<br />
+			First Name: <h:inputText value="#{employeeBeanFive.firstName}" 
+			required="true" id="firstName" requiredMessage="First Name is required" />
+			
+			<h:message for="firstName" styleClass="error"/>		
+			
+			<br />
+			Age : <h:inputText value="#{employeeBeanFive.age}" id="age" >
+				<f:validateLongRange minimum="13" maximum="19" />
+			</h:inputText>
+			
+			<h:message for="age" styleClass="error"/>	
+			
+			
+			<br />
+			Postal Code : <h:inputText value="#{employeeBeanFive.postalCode}" id="postalCode" validatorMessage="Invalid Postal Code.">
+				<f:validateLength minimum="5" maximum="5" />
+				</h:inputText>
+			
+				<h:message for="postalCode" styleClass="error" />
+				
+			<br />
+			Mobile No : <h:inputText value="#{employeeBeanFive.mobileNo}" id="mobileNo" 
+						validatorMessage="Mobile # must be in the format of xxxx-xxx-xxxx">
+						
+						<f:validateRegex pattern="\d{4}-\d{3}-\d{4}" />
+						
+						</h:inputText>
+						<h:message for="mobileNo" styleClass="error"/>
+			
+			<br />
+			Email : <h:inputText value="#{employeeBeanFive.email}" id="email" 
+						validatorMessage="Invalid email address">
+						
+						<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+						
+						</h:inputText>
+						<h:message for="email" styleClass="error"/>
+						
+			<br />
+			Product Code : <h:inputText value="#{employeeBeanFive.productCode}" id="productCode" 
+							validator="#{employeeBeanFive.validateProductCode}" />
+							
+							<h:message for="productCode" styleClass="error"/>
+						
+			<br/><br/>
+			<h:commandButton value="Submit" action="employee_confirmation" />
+		</fieldset>
+		
+	</h:form>
+</h:body>
+</html>

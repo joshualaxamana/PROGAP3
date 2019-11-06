@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f = "http://java.sun.com/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<meta charset="ISO-8859-1" />
+	<title>JSF Employee Information Page</title>
+</h:head>
+<h:body>
+	<h1>Employee Information Page</h1>
+	<h:form>
+		<fieldset>
+			<legend>Enter Employee information</legend>
+			
+			Last Name: <h:inputText value="#{employeeBeanFour.lastName}" /><br />
+			
+			First Name: <h:inputText value="#{employeeBeanFour.firstName}" /><br />
+			
+			Requirements Submitted:
+			<h:selectManyCheckbox value="#{employeeBeanFour.requirements}">
+				
+				<f:selectItem itemValue="SSS" itemLabel="SSS" />
+				<f:selectItem itemValue="Pag-ibig" itemLabel="Pag-ibig" />
+				<f:selectItem itemValue="Birth Certificate" itemLabel="Birth Certificate" />
+				<f:selectItem itemValue="TOR" itemLabel="TOR" />
+			
+			</h:selectManyCheckbox>
+			
+			<br/><br/>
+			<h:commandButton value="Submit" action="employee_confirmation4" />
+		</fieldset>
+		
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:head>
+		<title>JSF Test Your Knowledge</title>
+	</h:head>
+	
+	<h:body>
+	<h2>Question #5</h2>
+		<h:form>
+		<fieldset>
+		<br/>
+		JDBC stands for:
+			<h:selectOneRadio value="#{quizBean.question5}">
+				<f:selectItem itemValue="a" itemLabel="a. Java Database Connectivity" />
+				<f:selectItem itemValue="b" itemLabel="b. Java Database Connection" />
+				<f:selectItem itemValue="c" itemLabel="c. Java Data Business Continuity" />
+				<f:selectItem itemValue="d" itemLabel="d. None of the above" />
+			</h:selectOneRadio>
+		</fieldset>
+			<h:commandButton value="Next" action="#{quizBean.answer5}" />
+			<h:commandButton value="Go back" action="page4.xhtml" />
+		</h:form>
+	</h:body>
+	
+</html>

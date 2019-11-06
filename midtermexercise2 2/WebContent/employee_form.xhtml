@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device width, initial-scale=1" />
+	<meta http-equiv="X-UA-Conpatible" content="IE=edge" />
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+	<title>Employee Form</title>
+</h:head>
+
+<h:body>
+	<div class="container">
+		<h:form>
+			<div class="well">
+				<fieldset>
+					<legend>Please provide your information</legend>
+					<br /> First Name:
+					<h:inputText class="form-control" value="#{employeeBean.firstName}"
+						a:placeholder="What is your first name?" />
+					<br /> Last Name:
+					<h:inputText class="form-control" value="#{employeeBean.lastName}"
+						a:placeholder="What is your last name?" />
+					<br /> Address:
+					<h:inputText class="form-control" value="#{employeeBean.address}"
+						a:placeholder="Where do you live?" />
+					<br /> Contact No.:
+					<h:inputText class="form-control" value="#{employeeBean.contactNo}"
+						a:placeholder="Input your contact number.." />
+					<br /> Year of Birth:
+					<h:inputText class="form-control" value="#{employeeBean.birthYear}"
+						a:placeholder="What is your last name?" />
+					<br /> Gender:
+					<h:selectOneRadio value="#{employeeBean.gender}">
+						<f:selectItem itemValue="Male" itemLabel="Male" />
+						<f:selectItem itemValue="Female" itemLabel="Female" />
+					</h:selectOneRadio>
+					<br /> Email:
+					<h:inputText class="form-control" value="#{employeeBean.email}"
+						a:placeholder="Input your email address.." />
+					<br /> Password:
+					<h:inputSecret class="form-control"
+						value="#{employeeBean.password}"
+						a:placeholder="Input your password..." />
+					<br /> Confirm Password:
+					<h:inputSecret class="form-control"
+						value="#{employeeBean.confirmPassword}"
+						a:placeholder="Confirm password..." />
+					<br /> Martial Status:
+					<h:selectOneMenu value="#{employeeBean.status}">
+						<f:selectItems value="#{employeeBean.statusOptions}" />
+					</h:selectOneMenu>
+					<br /> Programming Languages:
+					<h:selectManyCheckbox value="#{employeeBean.progLang}">
+						<f:selectItem itemValue="C#" itemLabel="C#" />
+						<f:selectItem itemValue="Java" itemLabel="Java" />
+						<f:selectItem itemValue="PHP" itemLabel="PHP" />
+						<f:selectItem itemValue="Swift" itemLabel="Swift" />
+						<f:selectItem itemValue="ASP.Net" itemLabel="ASP.Net" />
+					</h:selectManyCheckbox>
+					<br /> Scripting Languages:
+					<h:selectManyCheckbox value="#{employeeBean.scriptLang}">
+						<f:selectItem itemValue="Javascript" itemLabel="Javascript" />
+						<f:selectItem itemValue="jQuery" itemLabel="jQuery" />
+						<f:selectItem itemValue="HTML 5" itemLabel="HTML 5" />
+						<f:selectItem itemValue="CSS" itemLabel="CSS" />
+						<f:selectItem itemValue="jSon" itemLabel="jSon" />
+					</h:selectManyCheckbox>
+					<br /> Are you interested to be relocated?
+					<h:selectOneRadio value="#{employeeBean.relocated}">
+						<f:selectItem itemValue="Yes" itemLabel="Yes" />
+						<f:selectItem itemValue="No" itemLabel="No" />
+					</h:selectOneRadio>
+					<br /> Which area do you prefer to be assigned?
+					<h:selectOneRadio value="#{employeeBean.area}">
+						<f:selectItem itemValue="Alabang" itemLabel="Alabang" />
+						<f:selectItem itemValue="Global City" itemLabel="Global City" />
+						<f:selectItem itemValue="Mandaluyong" itemLabel="Mandaluyong" />
+						<f:selectItem itemValue="Makati" itemLabel="Makati" />
+						<f:selectItem itemValue="Quezon City" itemLabel="Quezon City" />
+					</h:selectOneRadio>
+				</fieldset>
+				<h:commandButton class="btn btn-danger btn-lg" value="Submit"
+					action="#{employeeBean.compute}" />
+			</div>
+		</h:form>
+	</div>
+</h:body>
+</html>

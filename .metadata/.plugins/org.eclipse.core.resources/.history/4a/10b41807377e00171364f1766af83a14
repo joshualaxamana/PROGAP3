@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:head>
+		<title>Input Grades</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+		<fieldset>
+		<legend>Please Input Grades Below:</legend>
+		<br/>
+		<h4><b>Midterm Grade</b></h4>
+		Attendance:
+			<h:inputText value="#{grades.midtermAttendance}" 
+				id="midtermAttendance" required="true" requiredMessage="Midterm Attendance grade is required"/><br/>
+		Exercises:
+			<h:inputText value="#{grades.midtermExercises}" 
+			id="midterExercises" required="true" requiredMessage="Midterm Exercises grade is required"/> <br/>
+		Quizzes:
+			<h:inputText value="#{grades.midtermQuizzes}" 
+			id="midtermQuizzes" required="true" requiredMessage="Midterm Quizzes grade is required"/> <br/>
+		Special Project:
+			<h:inputText value="#{grades.midtermProject}" 
+			id="midtermProject" required="true" requiredMessage="Midterm Special Project grade is required"/> <br/>
+		Midterm Examination:
+			<h:inputText value="#{grades.midtermExam}" 
+			id="midtermExam" required="true" requiredMessage="Midterm Examination grade is required"/> <br/><br/>
+		<h4><b>Pre-Final Grade</b></h4>
+		Attendance:
+			<h:inputText value="#{grades.preFinalAttendance}" 
+			id="preFinalAttendance" required="true" requiredMessage="Pre-final Attendance grade is required"/> <br/>
+		Exercises:
+			<h:inputText value="#{grades.preFinalExercises}" 
+			id="preFinalExercises" required="true" requiredMessage="Pre-final Exercises grade is required"/> <br/>
+		Quizzes:
+			<h:inputText value="#{grades.preFinalQuizzes}" 
+			id="preFinalQuizzes" required="true" requiredMessage="Pre-final Quizzes grade is required"/> <br/>
+		Special Project:
+			<h:inputText value="#{grades.preFinalProject}" 
+			id="preFinalProject" required="true" requiredMessage="Pre-final special Project grade is required"/> <br/>
+		Pre-Final Examination:
+			<h:inputText value="#{grades.preFinalExam}" 
+			id="preFinalExam" required="true" requiredMessage="Pre-final Examination grade is required"/> <br/><br/>
+		</fieldset>
+			<h:commandButton value="Submit" action="#{grades.compute}" />
+		</h:form>
+	</h:body>
+	
+</html>

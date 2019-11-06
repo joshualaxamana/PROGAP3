@@ -1,0 +1,103 @@
+package csb.progap3.mybean;
+
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean
+public class Grades {
+
+	private int midtermAttendance;
+	private int midtermExercises;
+	private int midtermQuizzes;
+	private int midtermProject;
+	private int midtermExam;
+	private int preFinalAttendance;
+	private int preFinalExercises;
+	private int preFinalQuizzes;
+	private int preFinalProject;
+	private int preFinalExam;
+	private double midtermGrade;
+	private double preFinalGrade;
+	
+	public int getMidtermAttendance() {
+		return midtermAttendance;
+	}
+	public void setMidtermAttendance(int midtermAttendance) {
+		this.midtermAttendance = midtermAttendance;
+	}
+	public int getMidtermExercises() {
+		return midtermExercises;
+	}
+	public void setMidtermExercises(int midtermExercises) {
+		this.midtermExercises = midtermExercises;
+	}
+	public int getMidtermQuizzes() {
+		return midtermQuizzes;
+	}
+	public void setMidtermQuizzes(int midtermQuizzes) {
+		this.midtermQuizzes = midtermQuizzes;
+	}
+	public int getMidtermProject() {
+		return midtermProject;
+	}
+	public void setMidtermProject(int midtermProject) {
+		this.midtermProject = midtermProject;
+	}
+	public int getMidtermExam() {
+		return midtermExam;
+	}
+	public void setMidtermExam(int midtermExam) {
+		this.midtermExam = midtermExam;
+	}
+	public int getPreFinalAttendance() {
+		return preFinalAttendance;
+	}
+	public void setPreFinalAttendance(int preFinalAttendance) {
+		this.preFinalAttendance = preFinalAttendance;
+	}
+	public int getPreFinalExercises() {
+		return preFinalExercises;
+	}
+	public void setPreFinalExercises(int preFinalExercises) {
+		this.preFinalExercises = preFinalExercises;
+	}
+	public int getPreFinalQuizzes() {
+		return preFinalQuizzes;
+	}
+	public void setPreFinalQuizzes(int preFinalQuizzes) {
+		this.preFinalQuizzes = preFinalQuizzes;
+	}
+	public int getPreFinalProject() {
+		return preFinalProject;
+	}
+	public void setPreFinalProject(int preFinalProject) {
+		this.preFinalProject = preFinalProject;
+	}
+	public int getPreFinalExam() {
+		return preFinalExam;
+	}
+	public void setPreFinalExam(int preFinalExam) {
+		this.preFinalExam = preFinalExam;
+	}
+	public double getMidtermGrade() {
+		return midtermGrade;
+	}
+	public void setMidtermGrade(double midtermGrade) {
+		midtermGrade = (midtermAttendance * .10) + (midtermExercises * .20) + (midtermQuizzes * 25)
+				+ (midtermProject * .20) + (midtermExam * .25);
+	}
+	public double getPreFinalGrade() {
+		return preFinalGrade;
+	}
+	public void setPreFinalGrade(double preFinalGrade) {
+		preFinalGrade = (preFinalAttendance * .10) + (preFinalExercises * .20) + (preFinalQuizzes * 25)
+				+ (preFinalProject * .20) + (preFinalExam * .25);
+	}
+	
+	public String compute() {
+		
+		return "results";
+		
+	}
+	
+	
+}

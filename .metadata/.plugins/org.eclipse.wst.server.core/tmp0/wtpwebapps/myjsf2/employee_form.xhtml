@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+	
+	<h:head>
+		<title>Employee Form</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+		<fieldset>
+		<legend>Please provide your information</legend>
+		<br/>
+		First Name:
+			<h:inputText value="#{employeeBean.firstName}"
+				a:placeholder="What is your first name?" /> <br/>
+		Last Name:
+			<h:inputText value="#{employeeBean.lastName}"
+				a:placeholder="What is your last name?" /> <br/>
+		Email:
+			<h:inputText value="#{employeeBean.email}"
+				a:placeholder="Input your email address.." /> <br/>
+		Contact No.:
+			<h:inputText value="#{employeeBean.contactNo}"
+				a:placeholder="Input your contact number.." /> <br/><br/>
+		</fieldset>
+			<h:commandButton value="Submit" action="employee_datatable.xhtml" />
+		</h:form>
+	</h:body>
+	
+</html>

@@ -1,0 +1,116 @@
+package csb.progap3.mybean;
+
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean
+public class Grades {
+
+	private int midtermAttendance;
+	private int midtermExercises;
+	private int midtermQuizzes;
+	private int midtermProject;
+	private int midtermExam;
+	private int preFinalAttendance;
+	private int preFinalExercises;
+	private int preFinalQuizzes;
+	private int preFinalProject;
+	private int preFinalExam;
+	private double midtermGrade;
+	private double preFinalGrade;
+	private double finalGrade;
+	
+	public int getMidtermAttendance() {
+		return midtermAttendance;
+	}
+	public void setMidtermAttendance(int midtermAttendance) {
+		this.midtermAttendance = midtermAttendance;
+	}
+	public int getMidtermExercises() {
+		return midtermExercises;
+	}
+	public void setMidtermExercises(int midtermExercises) {
+		this.midtermExercises = midtermExercises;
+	}
+	public int getMidtermQuizzes() {
+		return midtermQuizzes;
+	}
+	public void setMidtermQuizzes(int midtermQuizzes) {
+		this.midtermQuizzes = midtermQuizzes;
+	}
+	public int getMidtermProject() {
+		return midtermProject;
+	}
+	public void setMidtermProject(int midtermProject) {
+		this.midtermProject = midtermProject;
+	}
+	public int getMidtermExam() {
+		return midtermExam;
+	}
+	public void setMidtermExam(int midtermExam) {
+		this.midtermExam = midtermExam;
+	}
+	public int getPreFinalAttendance() {
+		return preFinalAttendance;
+	}
+	public void setPreFinalAttendance(int preFinalAttendance) {
+		this.preFinalAttendance = preFinalAttendance;
+	}
+	public int getPreFinalExercises() {
+		return preFinalExercises;
+	}
+	public void setPreFinalExercises(int preFinalExercises) {
+		this.preFinalExercises = preFinalExercises;
+	}
+	public int getPreFinalQuizzes() {
+		return preFinalQuizzes;
+	}
+	public void setPreFinalQuizzes(int preFinalQuizzes) {
+		this.preFinalQuizzes = preFinalQuizzes;
+	}
+	public int getPreFinalProject() {
+		return preFinalProject;
+	}
+	public void setPreFinalProject(int preFinalProject) {
+		this.preFinalProject = preFinalProject;
+	}
+	public int getPreFinalExam() {
+		return preFinalExam;
+	}
+	public void setPreFinalExam(int preFinalExam) {
+		this.preFinalExam = preFinalExam;
+	}
+	public double getMidtermGrade() {
+		return midtermGrade;
+	}
+	public void setMidtermGrade(double midtermGrade) {
+		this.midtermGrade = midtermGrade;
+	}
+	public double getPreFinalGrade() {
+		return preFinalGrade;
+	}
+	public void setPreFinalGrade(double preFinalGrade) {
+		this.preFinalGrade = preFinalGrade;
+	}
+	public double getFinalGrade() {
+		return finalGrade;
+	}
+	public void setFinalGrade(double finalGrade) {
+		this.finalGrade = finalGrade;
+	}
+	
+	public String compute() {
+		
+		midtermGrade = ((midtermAttendance * 0.10) + (midtermExercises * 0.20) + (midtermQuizzes * 0.25)
+				+ (midtermProject * 0.20) + (midtermExam * 0.25));
+		
+		preFinalGrade = ((preFinalAttendance * 0.10) + (preFinalExercises * 0.20) + (preFinalQuizzes * 0.25)
+				+ (preFinalProject * 0.20) + (preFinalExam * 0.25));
+		
+		finalGrade = ((midtermGrade * .50) + (preFinalGrade * .50));
+		
+		return "results";
+		
+	}
+	
+	
+}

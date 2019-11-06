@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Employee Information</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<fieldset>
+			<legend>Please provide your information</legend>
+			<br /> Enter Employee First Name:
+			<h:inputText value="#{employeeBean.firstName}" />
+			<br /> Enter Employee Last Name:
+			<h:inputText value="#{employeeBean.lastName}" />
+			<br /> Enter Employee Department:
+			<h:selectOneMenu value="#{employeeBean.dept}">
+				<f:selectItems value="#{employeeBean.deptOptions}" />
+			</h:selectOneMenu>
+			<br /> Enter Employee Status:
+			<h:selectOneMenu value="#{employeeBean.status}">
+				<f:selectItems value="#{employeeBean.statusOptions}" />
+			</h:selectOneMenu>
+			<br /> Enter Employee Tax Code (1 or 3):
+			<h:selectOneRadio value="#{employeeBean.taxCode}">
+				<f:selectItem itemValue="1" itemLabel="1" />
+				<f:selectItem itemValue="3" itemLabel="3" />
+			</h:selectOneRadio>
+			<br /> Enter Employee Monthly Basic Salary:
+			<h:inputText value="#{employeeBean.basicSalary}" />
+			<br /> <br />
+		</fieldset>
+		<h:commandButton value="Submit" action="#{employeeBean.compute}" />
+	</h:form>
+</h:body>
+
+</html>

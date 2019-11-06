@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:head>
+		<title>Input Grades</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+		<fieldset>
+		<legend>Please Input Grades Below:</legend>
+		<br/>
+		<h4><b>Midterm Grade</b></h4>
+		Attendance:
+			<h:inputText value="#{grades.midtermAttendance}" /> <br/>
+		Exercises:
+			<h:inputText value="#{grades.midtermExercises}" /> <br/>
+		Quizzes:
+			<h:inputText value="#{grades.midtermQuizzes}" /> <br/>
+		Special Project:
+			<h:inputText value="#{grades.midtermProject}" /> <br/>
+		Midterm Examination:
+			<h:inputText value="#{grades.midtermExam}" /> <br/><br/>
+		<h4><b>Pre-Final Grade</b></h4>
+		Attendance:
+			<h:inputText value="#{grades.preFinalAttendance}" /> <br/>
+		Exercises:
+			<h:inputText value="#{grades.preFinalExercises}" /> <br/>
+		Quizzes:
+			<h:inputText value="#{grades.preFinalQuizzes}" /> <br/>
+		Special Project:
+			<h:inputText value="#{grades.preFinalProject}" /> <br/>
+		Pre-Final Examination:
+			<h:inputText value="#{grades.preFinalExam}" /> <br/><br/>
+		</fieldset>
+			<h:commandButton value="Submit" action="employee_datatable.xhtml" />
+		</h:form>
+	</h:body>
+	
+</html>

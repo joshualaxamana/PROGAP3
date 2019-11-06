@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:head>
+		<title>Employee Form</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+		<fieldset>
+		<legend>Please provide your information</legend>
+		<br/>
+		First Name:
+			<h:inputText value="#{employeeDataUtil.firstName}" /> <br/>
+		Last Name:
+			<h:inputText value="#{employeeDataUtil.lastName}" /> <br/>
+		Email:
+			<h:inputText value="#{employeeDataUtil.email}" /> <br/> <br/>
+		</fieldset>
+			<h:commandButton value="Add" action="#{employeeDataUtil.addData}" />
+		</h:form>
+	</h:body>
+	
+</html>

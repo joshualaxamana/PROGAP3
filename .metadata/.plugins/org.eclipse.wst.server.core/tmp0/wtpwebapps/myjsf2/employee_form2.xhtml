@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html" >
+	
+	<h:head>
+		<title>Drop-down List</title>
+		<style>
+			.error {color:red};
+		</style>
+	</h:head>
+	
+	<h:body>
+	<h2>Drop-down List</h2>
+		<h:form>
+		<fieldset>
+		<legend>Please provide your information</legend>
+		<h:messages styleClass="error"/>
+		<br/>
+		First Name:
+			<h:inputText value="#{employeeBeanTwo.firstName}" required="true" 
+				requiredMessage="First Name is required" /> <br/><br/>
+		Last Name:
+			<h:inputText value="#{employeeBeanTwo.lastName}" required="true" 
+				requiredMessage="Last Name is required"/> <br/><br/>
+		Workshift:
+			<!-- <h:selectOneMenu value="#{employeeBeanTwo.workShift}">
+				<f:selectItem itemValue="Morning Shift" itemLabel="Morning Shift" />
+				<f:selectItem itemValue="Mid Shift" itemLabel="Mid Shift" />
+				<f:selectItem itemValue="Night Shift" itemLabel="Night Shift" />
+				</h:selectOneMenu> -->
+			
+			<h:selectOneMenu value="#{employeeBeanTwo.workShift}">
+				<f:selectItems value="#{employeeBeanTwo.workShiftOptions}" />
+			</h:selectOneMenu>
+				
+		</fieldset>
+			<h:commandButton value="Submit" action="employee_confirmation2" />
+		</h:form>
+	</h:body>
+	
+</html>

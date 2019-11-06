@@ -1,0 +1,9 @@
+127.0.0.1 - - [30/Jun/2017:09:30:03 +0800] "GET / HTTP/1.1" 404 998
+127.0.0.1 - - [30/Jun/2017:09:30:04 +0800] "GET /myjsf2/employee_validate.jsf HTTP/1.1" 200 1940
+127.0.0.1 - - [30/Jun/2017:09:30:52 +0800] "POST /myjsf2/employee_validate.jsf HTTP/1.1" 200 2427
+127.0.0.1 - - [30/Jun/2017:09:31:02 +0800] "POST /myjsf2/employee_validate.jsf HTTP/1.1" 200 370
+127.0.0.1 - - [30/Jun/2017:10:38:55 +0800] "GET / HTTP/1.1" 404 998
+127.0.0.1 - - [30/Jun/2017:10:38:56 +0800] "GET /myjsf2/WEB-INF/classes/csb/progap3/mybean/EmployeeDataUtil.java HTTP/1.1" 404 996
+127.0.0.1 - - [30/Jun/2017:10:39:05 +0800] "GET /myjsf2/employee_list.jsf HTTP/1.1" 200 1029
+127.0.0.1 - - [30/Jun/2017:10:40:56 +0800] "GET / HTTP/1.1" 404 998
+127.0.0.1 - - [30/Jun/2017:10:40:57 +0800] "GET /myjsf2/employee_list.jsf HTTP/1.1" 200 1029
